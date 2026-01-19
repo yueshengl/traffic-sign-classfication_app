@@ -1,0 +1,18 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- White space between border and color block -->
+    <item android:left="2dp" android:right="2dp" android:top="2dp" android:bottom="2dp">
+        <shape>
+            <solid android:color="@color/background_grey"/> <!-- 空白区域为白色 -->
+            <corners android:radius="8dp"/> <!-- 边框和颜色块的圆角一致 -->
+            <stroke android:width="7dp" android:color="@color/background_grey"/>
+        </shape>
+    </item>
+
+    <!-- Border color (e.g., green) -->
+    <item android:left="6dp" android:right="6dp" android:top="6dp" android:bottom="6dp">
+        <shape>
+            <solid android:color="@color/red"/> <!-- 边框颜色为绿色 -->
+            <corners android:radius="8dp"/> <!-- 边框的圆角半径 -->
+        </shape>
+    </item>
+</layer-list>

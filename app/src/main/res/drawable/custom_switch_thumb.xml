@@ -1,0 +1,4 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true" android:drawable="@drawable/thumb_on" /> <!-- 当开关打开时显示的图片 -->
+    <item android:state_checked="false" android:drawable="@drawable/thumb_off" /> <!-- 当开关关闭时显示的图片 -->
+</selector>

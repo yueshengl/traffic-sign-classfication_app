@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SettingActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/green"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/ib_back"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="@color/green"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ib_back" />
+
+            <TextView
+                android:id="@+id/tv_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/action_settings"
+                android:textColor="@color/black"
+                android:textSize="@dimen/common_font_size" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/rounded_card_background"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!--语音播报-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/broadcast" />
+
+                    <TextView
+                        android:id="@+id/tv_broadcast"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingStart="16dp"
+                        android:text="@string/result_broadcast"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/common_font_size" />
+
+                    <Switch
+                        android:id="@+id/switch_broadcast"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:textOff=""
+                        android:textOn=""
+                        android:thumb="@drawable/custom_switch_thumb"
+                        android:track="@drawable/custom_switch_track"
+                        tools:ignore="UseSwitchCompatOrMaterialXml" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/rounded_card_background"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- 字体大小 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/font_size" />
+
+                    <TextView
+                        android:id="@+id/tv_font"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingStart="16dp"
+                        android:text="@string/font"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/common_font_size" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingTop="8dp">
+
+                    <TextView
+                        android:id="@+id/tv_font_preview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="1"
+                        android:paddingBottom="8dp"
+                        android:text="@string/font_preview"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/common_font_size" />
+
+                    <com.example.trafficsignrecognition.util.CustomSeekbar
+                        android:id="@+id/progressBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        app:circleColor="@color/white"
+                        app:circleRadius="12dp"
+                        app:lineColor="@color/green"
+                        app:lineWidth="2dp"
+                        app:totalCount="4" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/rounded_card_background"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- 主题颜色 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/theme" />
+
+                    <TextView
+                        android:id="@+id/tv_theme"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingStart="16dp"
+                        android:text="@string/theme"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/common_font_size" />
+                </LinearLayout>
+
+                <!-- 4列的颜色格子布局 -->
+                <GridLayout
+                    android:id="@+id/grid_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="4"
+                    android:orientation="horizontal"
+                    android:paddingLeft="24dp"
+                    android:paddingRight="16dp"
+                    android:paddingBottom="16dp">
+
+                    <FrameLayout
+                        android:id="@+id/fl_color_1"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_margin="8dp">
+
+                        <View
+                            android:id="@+id/color_block_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/border_background1" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/fl_color_2"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_margin="8dp">
+
+                        <View
+                            android:id="@+id/color_block_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/border_background2" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/fl_color_3"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_margin="8dp">
+
+                        <View
+                            android:id="@+id/color_block_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/border_background3" />
+                    </FrameLayout>
+
+
+                    <FrameLayout
+                        android:id="@+id/fl_color_4"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_margin="8dp">
+
+                        <View
+                            android:id="@+id/color_block_4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/border_background4" />
+                    </FrameLayout>
+
+
+                    <FrameLayout
+                        android:id="@+id/fl_color_5"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_margin="8dp">
+
+                        <View
+                            android:id="@+id/color_block_5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/border_background5" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/fl_color_6"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_margin="8dp">
+
+                        <View
+                            android:id="@+id/color_block_6"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/border_background6" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/fl_color_7"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_margin="8dp">
+
+                        <View
+                            android:id="@+id/color_block_7"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/border_background7" />
+                    </FrameLayout>
+
+
+                    <FrameLayout
+                        android:id="@+id/fl_color_8"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_margin="8dp">
+
+                        <View
+                            android:id="@+id/color_block_8"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/border_background8" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/fl_color_9"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_margin="8dp">
+
+                        <View
+                            android:id="@+id/color_block_9"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/border_background9" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/fl_color_10"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_margin="8dp">
+
+                        <View
+                            android:id="@+id/color_block_10"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/border_background10" />
+                    </FrameLayout>
+
+                </GridLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/rounded_card_background"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!--退出登录-->
+                <LinearLayout
+                    android:id="@+id/ll_exit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="6dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/exit" />
+
+                    <TextView
+                        android:id="@+id/tv_exit"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingStart="16dp"
+                        android:text="@string/exit"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/common_font_size" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

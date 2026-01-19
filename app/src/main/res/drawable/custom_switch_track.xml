@@ -1,0 +1,4 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true" android:drawable="@drawable/track_on" /> <!-- 当开关打开时显示的背景 -->
+    <item android:state_checked="false" android:drawable="@drawable/track_off" /> <!-- 当开关关闭时显示的背景 -->
+</selector>

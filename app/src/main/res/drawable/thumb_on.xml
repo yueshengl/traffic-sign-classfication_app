@@ -1,0 +1,5 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#FFFFFF"/> <!-- 滑块为白色 -->
+    <corners android:radius="13dp"/> <!-- 圆角滑块 -->
+    <size android:width="25dp" android:height="25dp"/> <!-- 大小为20dp的圆形滑块 -->
+</shape>

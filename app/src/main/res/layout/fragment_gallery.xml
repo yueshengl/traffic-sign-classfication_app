@@ -1,0 +1,103 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <!-- Prohibition Signs Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingVertical="8dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/line2"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Prohibition_Signs"
+                android:textSize="@dimen/common_font_size"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+
+        <GridView
+            android:id="@+id/gridview_prohibition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="4"
+            android:verticalSpacing="8dp"
+            android:horizontalSpacing="8dp"
+            android:scrollbars="none"/>
+
+        <!-- Instruction Signs Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingVertical="8dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/line2"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Instruction_Signs"
+                android:textSize="@dimen/common_font_size"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+
+        <GridView
+            android:id="@+id/gridview_instruction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="4"
+            android:verticalSpacing="8dp"
+            android:horizontalSpacing="8dp"
+            android:scrollbars="none"/>
+
+        <!-- Warning Signs Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingVertical="8dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/line2"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Warning_Signs"
+                android:textSize="@dimen/common_font_size"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+
+        <GridView
+            android:id="@+id/gridview_warning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="4"
+            android:verticalSpacing="8dp"
+            android:horizontalSpacing="8dp"
+            android:scrollbars="none"/>
+
+    </LinearLayout>
+</ScrollView>

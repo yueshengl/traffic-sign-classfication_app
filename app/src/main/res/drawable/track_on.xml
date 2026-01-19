@@ -1,0 +1,5 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/green"/> <!-- 轨道为绿色，代表开关打开 -->
+    <corners android:radius="12dp"/> <!-- 圆角轨道 -->
+    <size android:width="50dp" android:height="25dp"/> <!-- 轨道大小 -->
+</shape>
