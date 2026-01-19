@@ -1,0 +1,6 @@
+path: F:\ML_DL\FullIJCNN2013\gtsdb_yolo
+train: images/train
+val: images/val
+
+nc: 1
+names: ["traffic sign"]

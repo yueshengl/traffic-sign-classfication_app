@@ -9,7 +9,7 @@ public class ConstantUtil {
 
     public static final int TEXT_SIZE = 17;
     public static final int ALERT_SIZE = 10;
-    public static final String DETECT_MODEL = "YOLOv8n_int8.tflite";
+    public static final String DETECT_MODEL = "YoLov8n_float16.tflite";
     public static final String RECOGNIZE_MODEL = "new_cnn.tflite";
     public static final String AM_MODEL = "fastspeech2_csmsc_arm.nb";
     public static final String VO_MODEL = "mb_melgan_csmsc_arm.nb";
