@@ -1,6 +1,7 @@
 package com.example.trafficsignrecognition.util;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.pm.PackageManager;
@@ -187,6 +188,7 @@ public class CameraProcessor {
         }
     }
 
+    @SuppressLint("DefaultLocale")
     private void processFrame() {
         if (isProcessingFrame) {
             return;  // 如果当前正在处理帧或者帧差异太小，则不进行新的处理
@@ -198,7 +200,10 @@ public class CameraProcessor {
             new Thread(() -> {
                 try {
                     // 执行识别逻辑
+                    long startTime = System.currentTimeMillis();//计算识别时间
                     Pair<List<Integer>, List<float[]>> result = recognizeTool.recognizeFrame(bitmap);
+                    long endTime = System.currentTimeMillis();
+                    long recognitionTime = endTime - startTime;
                     List<float[]> detectedBoxes = result.second;
                     List<String> recognizeResult = new ArrayList<>();
                     for (Integer i: result.first) {
@@ -222,6 +227,7 @@ public class CameraProcessor {
                         overlayView.setDetectedRect(rect,position);
                         recognizeTool.removeTableRow(tableLayout);
                         recognizeTool.updateTableLayout(context, tableLayout, recognizeResult, savedPosition);
+                        ToastUtil.show(context, String.format("识别耗时: %d ms", recognitionTime));
                     });
                     Log.d("TTS","broadcast:"+ broadcast);
                     if(Boolean.TRUE.equals(broadcast)){
