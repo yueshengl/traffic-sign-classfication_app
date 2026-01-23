@@ -1,3 +1,4 @@
 *.ppm linguist-language=java
 *.png linguist-language=java
 *.txt linguist-language=java
+*.ipynb linguist-language=java
